@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+form{
+    /* display as a nice row of equal height items */
+    display: flex;
+    height: 2.5rem;
+    /* buffer on all sides */
+    padding: 2rem;
+}
+form > * {
+    /* just enough horizontal spacing */
+    margin-right: 1.4rem;
+}
+#input-seedColor{
+    height: 100%;
+    width: 4rem;
+    cursor: pointer;
+    padding: 0;
+}
+#select-mode{
+    font-size: 1.4rem;
+    width: 40vw;
+}
+#submit{
+    font-size: 1.4rem;
+    cursor: pointer;
+    background: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#submit:hover,
+#submit:focus{
+    background: #efefef;
+}
+#scheme-container{
+    display: flex;
+    height: 80vh;
+}
+.colorBox{
+    height: 85%;
+    width: 20vw;
+}
+.colorTitle{
+    background-color: white;
+    height: 15%;
+    text-align: center;
+}
+p{
+    font-size: 1rem;
+}
