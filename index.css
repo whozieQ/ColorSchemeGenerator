@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     font-size: 12px;
+    min-width: 550px;
 }
 form{
     /* display as a nice row of equal height items */

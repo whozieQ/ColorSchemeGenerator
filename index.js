@@ -1,8 +1,8 @@
-const schemeModes = ["Monochrome", "Monochrome-dark", "Monochrome-light", "Analogic", "Complement", "Analogic-complement", "Triad", "Quad"]
+const schemeModes = ["Analogic","Monochrome", "Monochrome-dark", "Monochrome-light", "Analogic-complement", "Complement", "Triad", "Quad"]
 
 const baseURL = "https://www.thecolorapi.com"
 const endpoint = "/scheme"
-let seedColor = "#ffffff"
+let seedColor = "#29A4A4"
 let mode = schemeModes[0]
 const modePicker = document.getElementById("select-mode")
 const seedPicker = document.getElementById("input-seedColor")
@@ -18,9 +18,6 @@ formGetScheme.addEventListener("submit",(event)=>{
     getScheme()
 })
 
-// document.getElementById("scheme-container").addEventListener('click',function(e){
-//     console.log(this.id)
-//  });
 populateModeList()
 
 function populateModeList(){
@@ -61,7 +58,7 @@ function renderColors(){
         let colorName = seedColor === colorItem ? 
             `<b>${colorItem}</b>`: colorItem 
         const boxHTML = `
-            <div class="color-container" onclick="navigator.clipboard.writeText('${colorItem}')" >
+            <div class="color-container" onclick="copyHex('${colorItem}')" >
                 <div class="colorBox" style="background-color:${colorItem}">
                 </div>
                 <div class="colorTitle">
@@ -69,6 +66,11 @@ function renderColors(){
                 </div>
             </div>`
         container.innerHTML += boxHTML
-        // onclick="copyHex(event)"
     })
+}
+
+//Copy to clipboard and notify user we have done so
+function copyHex(msg){
+    navigator.clipboard.writeText(`${msg}`)
+    alert(`Hex color value ${msg} copied to clipboard`)
 }
