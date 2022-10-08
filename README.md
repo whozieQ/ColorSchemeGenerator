@@ -1,4 +1,8 @@
-# co429475a809ed6b4b28903b2
+# Color Scheme Generator
+
+A Solo Project
+
+Live site: https://whozieq-colorscheme.netlify.app/
 
 ## About Scrimba
 
